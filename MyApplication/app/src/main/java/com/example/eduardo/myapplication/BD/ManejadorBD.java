@@ -29,6 +29,20 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String ESTATUS_EMPLEADO = "estatus";
     private static final String ROL_EMPLEADO = "rol";
 
+    //CREACION DE LA TABLA
+    public static final String TABLA_EMPLEADOS_SQL =
+            "CREATE TABLE  " + TABLA_EMPLEADO + "(" +
+                    ID_EMPLEADO + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    NOMBRE_EMPLEADO + " TEXT NOT NULL," +
+                    APATERNO_EMPLEADO + " TEXT NOT NULL," +
+                    AMATERNO_EMPLEADO + " TEXT NOT NULL," +
+                    SEXO_EMPLEADO + " TEXT," +
+                    FECHA_NAC_EMPLEADO + " TEXT," +
+                    DIRECCION_EMPLEADO + " TEXT," +
+                    FOTO_EMPLEADO + " TEXT," +
+                    ESTATUS_EMPLEADO + " TEXT," +
+                    ROL_EMPLEADO   + " TEXT);" ;
+
     //NOMBRE DE LA TABLA ROL
     private static final String TABLA_ROL = "rol";
     //NOMBRE DE LA COLUMNAS DE ROL
@@ -196,6 +210,8 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String ID_SUCURSAL_V = "id_sucursal";
     private static final String FECHAVENTA_V = "fecha_venta";
     private static final String TOTAL = "total";
+
+
 
     
 
