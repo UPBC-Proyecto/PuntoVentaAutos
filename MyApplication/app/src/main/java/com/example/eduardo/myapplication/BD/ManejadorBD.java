@@ -29,7 +29,7 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String ESTATUS_EMPLEADO = "estatus";
     private static final String ROL_EMPLEADO = "rol";
 
-    //CREACION DE LA TABLA
+    //CREACION DE LA TABLA EMPLEADOS
     public static final String TABLA_EMPLEADOS_SQL =
             "CREATE TABLE  " + TABLA_EMPLEADO + "(" +
                     ID_EMPLEADO + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -50,12 +50,26 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String DESCRIPCION = "descripcion";
     private static final String ESTATUS_ROL = "estatus";
 
+    //CREACION DE LA TABLA ROL
+    public static final String TABLA_ROL_SQL =
+            "CREATE TABLE " + TABLA_ROL + "(" +
+                    ID_ROL + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION + " TEXT NOT NULL," +
+                    ESTATUS_ROL + " TEXT NOT NULL);";
+
     //NOMBRE DE LA TABLA SEXO
     private static final String TABLA_SEXO = "sexo";
     //NOMBRE DE LAS COLUMNAS DE SEXO
     private static final String ID_SEXO = "id_sexo";
     private static final String DESCRIPCION_SEXO = "descripcion";
     private static final String ESTATUS_SEXO = "estatus";
+
+    //CREACION DE LA TABLA SEXO
+    public static final String TABLA_SEXO_SQL =
+            "CREATE TABLE " + TABLA_SEXO + "(" +
+                    ID_SEXO + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION_SEXO + " TEXT NOT NULL," +
+                    ESTATUS_SEXO + " TEXT NOT NULL);";
 
     //NOMBRE DE LA TABLA CLIENTE
     private static final String TABLA_CLIENTE = "cliente";
@@ -74,6 +88,23 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String TELEFONO = "telefono";
     private static final String NUM_SEGURO = "num_seguro";
 
+    //CREACION DE LA TABLA CLIENTE
+    public static final String TABLA_CLIENTE_SQL =
+            "CREATE TABLE " + TABLA_CLIENTE + "(" +
+                    ID_CLIENTE + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    NOMBRE_CLIENTE + " TEXT NOT NULL," +
+                    APATERNO_CLIENTE + " TEXT NOT NULL," +
+                    AMATERNO_CLIENTE + " TEXT NOT NULL," +
+                    SEXO_CLIENTE + " TEXT NOT NULL," +
+                    FECHA_NAC_CLIENTE + " TEXT NOT NULL," +
+                    DIRECCION_CLIENTE + " TEXT NOT NULL," +
+                    FOTO_CLIENTE + " TEXT NOT NULL," +
+                    ESTATUS_CLIENTE + " TEXT NOT NULL," +
+                    ROL_CLIENTE + " TEXT NOT NULL," +
+                    CORREO + " TEXT NOT NULL," +
+                    TELEFONO + " TEXT NOT NULL," +
+                    NUM_SEGURO + " TEXT NOT NULL)";
+
     //NOMBRE DE LA TABLA VEHICULO
     private static final String TABLA_VEHICULO = "vehiculo";
     //NOMBRE DE LAS COLUMNAS DE VEHICULO
@@ -82,12 +113,27 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String YEAR = "year";
     private static final String ESTATUS_VEHICULO = "estatus";
 
+    //CREACION DE LA TABLA VEHICULO
+    public static final String TABLA_VEHICULO_SQL =
+            "CREATE TABLE " + TABLA_VEHICULO + "(" +
+                    ID_VEHICULO + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    MODELO + " TEXT NOT NULL," +
+                    YEAR + " TEXT NOT NULL," +
+                    ESTATUS_VEHICULO + " TEXT NOT NULL)";
+
     //NOMBRE DE LA TABLA MARCA
     private static final String TABLA_MARCA = "marca";
     //NOMBRE DE LA COLUMNAS DE MARCA
     private static final String ID_MARCA = "id_marca";
     private static final String DESCRIPCION_MARCA = "descripcion";
     private static final String ESTATUS_MARCA = "estatus";
+
+    //CREACION DE LA TABLA MARCA
+    public static final String TABLA_MARCA_SQL =
+            "CREATE TABLE " + TABLA_MARCA + "(" +
+                    ID_MARCA + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION_MARCA + " TEXT NOT NULL," +
+                    ESTATUS_MARCA + " TEXT NOT NULL)";
 
     //NOMBRE DE LA TABLA MODELO
     private static final String TABLA_MODELO = "modelo";
@@ -97,12 +143,27 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String ESTATUS_MODELO = "estatus";
     private static final String ID_MARCA_F = "id_marca";
 
+    //CREACION DE LA TABLA MODELO
+    public static final String TABLA_MODELO_SQL =
+            "CREATE TABLE " + TABLA_MODELO + "(" +
+                    ID_MODELO + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION_MODELO + " TEXT NOT NULL," +
+                    ESTATUS_MODELO + " TEXT NOT NULL," +
+                    ID_MARCA_F + " TEXT NOT NULL)";
+
     //NOMBRE DE LA TABLA COLOR
     private static final String TABLA_COLOR = "color";
     //NOMBRE DE LAS COLUMNAS DE COLOR
     private static final String ID_COLOR = "id_color";
     private static final String DESCRIPCION_COLOR = "descripcion";
     private static final String ESTATUS_COLOR = "estatus_color";
+
+    //CREACION DE LA TABLA COLOR
+    public static final String TABLA_COLOR_SQL =
+            "CREATE TABLE " + TABLA_COLOR + "(" +
+                    ID_COLOR + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION_COLOR + " TEXT NOT NULL," +
+                    ESTATUS_COLOR + " TEXT NOT NULL)";
 
     //NOMBRE DE LA TABLA TRANSMISION
     private static final String TABLA_TRANSMISION = "transmision";
@@ -111,12 +172,26 @@ public class ManejadorBD extends SQLiteOpenHelper {
     private static final String DESCRIPCION_TRANSMISION = "descripcion";
     private static final String ESTATUS_TRANSMISION = "estatus";
 
+    //CREACION DE LA TABLA TRANSMISION
+    public static final String TABLA_TRANSMISION_SQL =
+            "CREATE TABLE " + TABLA_TRANSMISION + "(" +
+                    ID_TRANSMISION + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION_TRANSMISION + " TEXT NOT NULL," +
+                    ESTATUS_TRANSMISION + " TEXT NOT NULL)";
+
     //NOMBRE DE LA TABLA MOTOR
     private static final String TABLA_MOTOR = "motor";
     //NOMBRE DE LAS COLUMNAS DE MOTOR
     private static final String ID_MOTOR = "id_motor";
     private static final String DESCRIPCION_MOTOR = "tabla_marca";
     private static final String ESTATUS_MOTOR = "estatus";
+
+    //CREACION DE LA TABLA MOTOR
+    public static final String TABLA_MOTOR_SQL =
+            "CREATE TABLE " + TABLA_MOTOR + "(" +
+                    ID_MOTOR + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    DESCRIPCION_MOTOR + " TEXT NOT NULL," +
+                    ESTATUS_MOTOR + " TEXT NOT NULL)";
 
     //NOMBRE DE LA TABLA CLASIFICACION
     private static final String TABLA_CLASIFICACION = "clasificacion";
